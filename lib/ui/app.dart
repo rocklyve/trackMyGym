@@ -1,8 +1,9 @@
+import 'package:TrackMyGains/domain/blocs/dynamic_link/dynamic_link_cubit.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../domain/blocs/bluetoothConnector/bluetooth_connection_cubit.dart';
+import '../domain/blocs/bluetooth_connector/bluetooth_connection_cubit.dart';
 import '../domain/repositories/data_repository.dart';
 import '../domain/repositories/data_repository_impl.dart';
 import '../navigation/router.gr.dart';
@@ -44,6 +45,10 @@ class _AppState extends State<App> {
               BlocProvider<BluetoothConnectionCubit>(
                 create: (context) =>
                     BluetoothConnectionCubit(), // ..startListener(),
+                lazy: false,
+              ),
+              BlocProvider<DynamicLinkCubit>(
+                create: (context) => DynamicLinkCubit(),
                 lazy: false,
               ),
             ],

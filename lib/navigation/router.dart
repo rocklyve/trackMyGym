@@ -1,16 +1,42 @@
-import 'package:TrackMyGains/ui/home_page.dart';
+import 'package:TrackMyGains/ui/pages/exercises_overview_page.dart';
 import 'package:auto_route/annotations.dart';
 
-const List<AutoRoute> _tabRoutes = <AutoRoute>[];
+import '../ui/pages/base_page.dart';
+import '../ui/pages/home_page.dart';
+import '../ui/pages/profile_page.dart';
+import '../ui/pages/progress_overview_page.dart';
+
+const List<AutoRoute> _tabRoutes = <AutoRoute>[
+  AutoRoute(
+    page: MyHomePage,
+    path: 'home',
+  ),
+  AutoRoute(
+    page: ProgressOverviewPage,
+    path: 'progressOverview',
+  ),
+  AutoRoute(
+    page: ExercisesOverviewPage,
+    path: 'exerciseOverview',
+  ),
+  AutoRoute(
+    page: ProfilePage,
+    path: 'profile',
+  ),
+];
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
     AutoRoute<String>(
-      page: MyHomePage,
-      path: '/',
+      page: BasePage,
+      path: '/base',
       maintainState: true,
       children: _tabRoutes,
+    ),
+    RedirectRoute(
+      path: '*',
+      redirectTo: '/base',
     ),
   ],
 )
