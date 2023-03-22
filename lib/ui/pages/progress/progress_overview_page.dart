@@ -12,6 +12,8 @@ class ProgressOverviewPage extends StatefulWidget {
 class _ProgressOverviewPage extends State<ProgressOverviewPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.blue);
+    return Scaffold(
+      body: Container(color: const Color(0xFF1E1E1E)),
+    );
   }
 }

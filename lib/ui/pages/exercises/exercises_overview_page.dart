@@ -12,6 +12,10 @@ class ExercisesOverviewPage extends StatefulWidget {
 class _ExercisesOverviewPage extends State<ExercisesOverviewPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.green);
+    return Scaffold(
+      body: Container(
+        color: const Color(0xFF4E9EA7),
+      ),
+    );
   }
 }

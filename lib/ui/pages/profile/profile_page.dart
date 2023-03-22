@@ -12,6 +12,10 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePage extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.red);
+    return Scaffold(
+      body: Container(
+        color: const Color(0xFFE65D4F),
+      ),
+    );
   }
 }

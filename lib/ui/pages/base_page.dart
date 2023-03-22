@@ -1,6 +1,5 @@
 import 'package:TrackMyGains/navigation/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ionicons/ionicons.dart';
@@ -18,6 +17,9 @@ class BasePage extends StatefulWidget {
 
 class _BasePageState extends State<BasePage> {
   late TabsRouter tabsRouter;
+
+  final Color _navbarItemIconColor = const Color(0xFF4E9FA7);
+  final Color _navbarItemIconInactiveColor = Colors.black54;
 
   Future<bool> _onWillPop(BuildContext context) async {
     final RouteData data = context.router.topRoute;
@@ -120,27 +122,51 @@ class _BasePageState extends State<BasePage> {
       <AppBottomNavigationBarItem>[
         _buildAppBottomNavigationBarItem(
           context: context,
-          icon: Icon(Ionicons.home),
-          inactiveIcon: Icon(Ionicons.home_outline),
-          name: "first",
+          icon: Icon(
+            Ionicons.home,
+            color: _navbarItemIconColor,
+          ),
+          inactiveIcon: Icon(
+            Ionicons.home_outline,
+            color: _navbarItemIconInactiveColor,
+          ),
+          name: "Dashboard",
         ),
         _buildAppBottomNavigationBarItem(
           context: context,
-          icon: Icon(Ionicons.newspaper),
-          inactiveIcon: Icon(Ionicons.newspaper_outline),
-          name: "snd",
+          icon: Icon(
+            Ionicons.analytics,
+            color: _navbarItemIconColor,
+          ),
+          inactiveIcon: Icon(
+            Ionicons.analytics_outline,
+            color: _navbarItemIconInactiveColor,
+          ),
+          name: "Progress",
         ),
         _buildAppBottomNavigationBarItem(
           context: context,
-          icon: Icon(Ionicons.videocam),
-          inactiveIcon: Icon(Ionicons.videocam_outline),
-          name: "third",
+          icon: Icon(
+            Ionicons.list,
+            color: _navbarItemIconColor,
+          ),
+          inactiveIcon: Icon(
+            Ionicons.list_outline,
+            color: _navbarItemIconInactiveColor,
+          ),
+          name: "Exercises",
         ),
         _buildAppBottomNavigationBarItem(
           context: context,
-          icon: Icon(Ionicons.bar_chart),
-          inactiveIcon: Icon(Ionicons.bar_chart_outline),
-          name: "fourth",
+          icon: Icon(
+            Ionicons.person,
+            color: _navbarItemIconColor,
+          ),
+          inactiveIcon: Icon(
+            Ionicons.person_outline,
+            color: _navbarItemIconInactiveColor,
+          ),
+          name: "Profile",
         ),
       ];
 

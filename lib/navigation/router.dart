@@ -1,10 +1,10 @@
-import 'package:TrackMyGains/ui/pages/exercises_overview_page.dart';
+import 'package:TrackMyGains/ui/pages/exercises/exercises_overview_page.dart';
 import 'package:auto_route/annotations.dart';
 
 import '../ui/pages/base_page.dart';
-import '../ui/pages/home_page.dart';
-import '../ui/pages/profile_page.dart';
-import '../ui/pages/progress_overview_page.dart';
+import '../ui/pages/home/home_page.dart';
+import '../ui/pages/profile/profile_page.dart';
+import '../ui/pages/progress/progress_overview_page.dart';
 
 const List<AutoRoute> _tabRoutes = <AutoRoute>[
   AutoRoute(
