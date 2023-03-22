@@ -1,5 +1,5 @@
-name: trackmygains
-description: A new Flutter project.
+name: TrackMyGains
+description: Track gym session and analyse progress.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -36,6 +36,7 @@ dependencies:
   equatable: ^2.0.5
   sqflite: ^2.2.6
   dart_code_metrics: ^5.6.0
+  auto_route: ^5.0.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -45,6 +46,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  auto_route_generator: ^5.0.3
+  build_runner: ^2.3.3
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

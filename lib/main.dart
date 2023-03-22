@@ -1,12 +1,12 @@
 import 'dart:async';
 
+import 'package:TrackMyGains/ui/app.dart';
+import 'package:TrackMyGains/utils/environment.dart';
+import 'package:TrackMyGains/utils/print.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:trackmygains/ui/app.dart';
-import 'package:trackmygains/utils/environment.dart';
-import 'package:trackmygains/utils/print.dart';
 
 import 'environment_data.dart';
 
